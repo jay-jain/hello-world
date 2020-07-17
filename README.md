@@ -32,6 +32,9 @@ npm run build
 npm run lint
 ```
 
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
 ## Run with Docker locally
 
 ### Build image
@@ -44,10 +47,7 @@ docker build -t hello-world .
 docker run -it -p 8080:8080 --rm --name docker-hello-world hello-world
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-## AWS Codepipeline
+## AWS Code Pipeline
 The pipeline built with this app consists of a Github hook that triggers a build. The build server creates a docker container 
 and pushes it to AWS Elastic Container Repository (ECR). Once this is done, Code Deploy creates an ECS cluster that runs the
 docker container from ECR.
