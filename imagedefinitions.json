@@ -1,0 +1,6 @@
+[
+    {
+       "name": "hello-world-vue-container",
+        "imageUri": "076858682202.dkr.ecr.us-east-1.amazonaws.com/hello-world-vue:Latest"
+    }
+]
