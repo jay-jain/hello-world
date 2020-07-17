@@ -59,3 +59,10 @@ docker container from ECR.
 1. Create a repository in ECR
 2. Make sure to configure environment variables in Code Build.
 3. Make sure the service role for Code Build has the correct IAM policy. See the link above.
+
+
+### ECS Commands
+```
+aws ecs register-task-definition --cli-input-json file://taskdef.json
+```
+

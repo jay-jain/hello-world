@@ -1,0 +1,29 @@
+{
+    "taskDefinition": "hello-world-vue-task:5",
+    "cluster": "hello-world-vue",
+    "loadBalancers": [
+        {
+            "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-1:076858682202:targetgroup/target-group-1/c1b00ae0ef4d463f",
+            "containerName": "hello-world-vue-container",
+            "containerPort": 8080
+        }
+    ],
+    "desiredCount": 1,
+    "launchType": "EC2",
+    "schedulingStrategy": "REPLICA",
+    "deploymentController": {
+        "type": "CODE_DEPLOY"
+    },
+    "networkConfiguration": {
+        "awsvpcConfiguration": {
+            "subnets": [
+                "subnet-d92b1cf7",
+                "subnet-f2f901bf"
+            ],
+            "securityGroups": [
+                "sg-0634749422f2f9771"
+            ],
+            "assignPublicIp": "ENABLED"
+        }
+    }
+}
